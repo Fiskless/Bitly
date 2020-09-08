@@ -2,6 +2,7 @@
 
 This project uses the Bitly API, which allows you to create shorten links. When the user input a link, a shortened link is displayed. But if the user specified a short link, it shows statistics of clicks on it.
 The result of code completion is presented below
+![Image alt](https://github.com/Fiskless/Bitly/blob/master/Bitly_example.png)
 
 ### How to install
 
