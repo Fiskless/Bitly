@@ -5,10 +5,6 @@ from dotenv import load_dotenv
 import argparse
 
 
-load_dotenv()
-SECRET_TOKEN = os.getenv("BITLY_API_TOKEN")
-
-
 def shorten_link(token, url):
     response = requests.post('https://api-ssl.bitly.com/v4/bitlinks',
                              headers = {'Authorization': f'Bearer {token}'},
@@ -34,6 +30,8 @@ def createParser():
 
 
 if __name__ == '__main__':
+    load_dotenv()
+    SECRET_TOKEN = os.getenv("BITLY_API_TOKEN")
     try:
         parser = createParser()
         args = parser.parse_args()
@@ -49,6 +47,6 @@ if __name__ == '__main__':
         else:
             short_link = shorten_link(SECRET_TOKEN,your_link)
             print('Yout bitlink is', short_link)
-    except:
+    except requests.exceptions.HTTPError:
         print("Your URL is not correct")
 
