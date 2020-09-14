@@ -12,7 +12,7 @@ Input the link: https://bit.ly/2ZfXkUf
 Count clicks of your bitlink is 2
 ```
 
-There is an easier way to run the script, it is possible to input link as an argument:
+There is an easier way to run the script, it is possible to use the entered link as an argument:
 
 ```
 $ python main.py https://yandex.ru/

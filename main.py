@@ -24,10 +24,7 @@ def count_clicks(token, bitlink):
 
 
 def createParser():
-    '''
-    
-    '''
-    parser = argparse.ArgumentParser()
+    parser = argparse.ArgumentParser(description = "Create parser which allow us to use the entered link as an argument in command prompt")
     parser.add_argument('link', nargs='?')
     return parser
 
