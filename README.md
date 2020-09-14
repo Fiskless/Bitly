@@ -2,7 +2,25 @@
 
 This project uses the Bitly API, which allows you to create shorten links. When the user input a link, a shortened link is displayed. But if the user specified a short link, it shows statistics of clicks on it. The result of code completion is presented below.
 
-![Image alt](https://github.com/Fiskless/Bitly/blob/master/Bitly_example.png)
+```
+$ python main.py
+Input the link: https://yandex.ru/
+Yout bitlink is https://bit.ly/2ZfXkUf
+
+$ python main.py
+Input the link: https://bit.ly/2ZfXkUf
+Count clicks of your bitlink is 2
+```
+
+There is an easier way to run the script, it is possible to input link as an argument:
+
+```
+$ python main.py https://yandex.ru/
+Yout bitlink is https://bit.ly/2ZfXkUf
+
+$ python main.py https://bit.ly/2ZfXkUf
+Count clicks of your bitlink is 2
+```
 
 ### How to install
 

@@ -24,6 +24,9 @@ def count_clicks(token, bitlink):
 
 
 def createParser():
+    '''
+    
+    '''
     parser = argparse.ArgumentParser()
     parser.add_argument('link', nargs='?')
     return parser
