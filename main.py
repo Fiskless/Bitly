@@ -35,7 +35,6 @@ if __name__ == '__main__':
         parser = createParser()
         parser.add_argument('link', help = 'Entered link for Bitly API')
         args = parser.parse_args()
-        print(args)
         if args.link:
             your_link = args.link
         else:
