@@ -25,7 +25,6 @@ def count_clicks(token, bitlink):
 
 def createParser():
     parser = argparse.ArgumentParser(description = "Create parser which allow us to use the entered link as an argument in command prompt")
-    parser.add_argument('link', nargs='?')
     return parser
 
 
@@ -34,7 +33,9 @@ if __name__ == '__main__':
     secret_token = os.getenv("BITLY_API_TOKEN")
     try:
         parser = createParser()
+        parser.add_argument('link', help = 'Entered link for Bitly API')
         args = parser.parse_args()
+        print(args)
         if args.link:
             your_link = args.link
         else:
