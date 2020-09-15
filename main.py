@@ -31,7 +31,7 @@ def createParser():
 
 if __name__ == '__main__':
     load_dotenv()
-    SECRET_TOKEN = os.getenv("BITLY_API_TOKEN")
+    secret_token = os.getenv("BITLY_API_TOKEN")
     try:
         parser = createParser()
         args = parser.parse_args()
@@ -43,9 +43,9 @@ if __name__ == '__main__':
         check_on_bitlink = your_link.startswith("https://bit.ly")
         if check_on_bitlink:
             parsed = urlparse(your_link)
-            print("Count clicks of your bitlink is", count_clicks(SECRET_TOKEN, f'{parsed.netloc}{parsed.path}'))
+            print("Count clicks of your bitlink is", count_clicks(secret_token, f'{parsed.netloc}{parsed.path}'))
         else:
-            short_link = shorten_link(SECRET_TOKEN,your_link)
+            short_link = shorten_link(secret_token,your_link)
             print('Yout bitlink is', short_link)
     except requests.exceptions.HTTPError:
         print("Your URL is not correct")
